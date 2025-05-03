@@ -1,96 +1,97 @@
-// seleksi DOM 
-const header = document.querySelector("header");
-const searchInput = document.querySelector(".search-input");
-const search = document.querySelector(".search");
-const searchIcon = document.querySelector("#search-icon");
-const hamburgerIcon = document.querySelector("#hamburger-icon");
-const navMenu = document.querySelector("#nav-menu");
-const navLink = document.querySelector("#nav-link");
-const navLinkAll = document.querySelectorAll("#nav-link");
-const logo = document.querySelector("#logo");
+// Seleksi DOM
+const header = document.querySelector(".site-header");
+const searchInput = document.querySelector(".search-form__input");
+const searchForm = document.querySelector(".search-form");
+const searchIcon = document.querySelector("#search-icon"); // Pastikan ID ini dipakai di HTML
 
-// ganti warna navbar jika skroll ke bawah
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 1) {
-    header.classList.add("header-scrolled");
+const hamburgerIcon = document.querySelector("#hamburger-menu"); // ID sudah sesuai
+const navMenu = document.querySelector(".nav__menu");
 
-    // ganti warna ikon
-    searchIcon.setAttribute("color", "black");
-    hamburgerIcon.setAttribute("color", "black");
+let lastScrollTop = 0;
+window.addEventListener("scroll", (e) => {
+  const currentScroll = window.scrollY;
 
-    // ganti warna logo dan mixblendmode
-    logo.style.color = "black";
-    logo.style.mixBlendMode = "normal";
+  if (currentScroll > lastScrollTop) {
+    // Scroll ke bawah
+    header.classList.add("site-header--scrolltop")
+  } else if (currentScroll < lastScrollTop) {
+    // Scroll ke atas
+    header.classList.remove("site-header--scrolltop")
 
-    // buat hamburger ikon mixblendmode normal
-    hamburgerIcon.style.mixBlendMode = "normal";
-    searchIcon.style.mixBlendMode = "normal";
-
-    // tambah kelas pada text link navigasi
-    if (window.innerWidth > 1280) {
-      navLinkAll.forEach((el) => {
-        el.classList.add("nav-link-noscrolled");
-      });
-    }
-  } else {
-    header.classList.remove("header-scrolled");
-
-    // ganti warna ikon
-    searchIcon.setAttribute("color", "white");
-    hamburgerIcon.setAttribute("color", "white");
-
-    // ganti warna logo dan mixblendmode
-    logo.style.color = "white";
-    logo.style.mixBlendMode = "difference";
-
-    // buat hamburger ikon mixblendmode difference/berbeda dari latar
-    hamburgerIcon.style.mixBlendMode = "difference";
-    searchIcon.style.mixBlendMode = "difference";
-
-    // hapus kelas pada text link navigasi
-    if (window.innerWidth > 1280) {
-      navLinkAll.forEach((el) => {
-        el.classList.remove("nav-link-noscrolled");
-      });
-    }
   }
 
+  lastScrollTop = currentScroll;
 });
 
-// aktifkan input search
-searchIcon.addEventListener("click", () => {
-  searchInput.classList.toggle("search-input-active");
-  search.classList.toggle("search-clicked");
-});
 
-// aktifkan sidebar dan ganti ikon hamburger ke x
+
 hamburgerIcon.addEventListener("click", () => {
-  navMenu.classList.toggle("nav-menu-active");
+  console.log(navMenu)
+  navMenu.classList.toggle("active")
+})
 
-  if (navMenu.classList.contains("nav-menu-active")) {
-    hamburgerIcon.setAttribute("name", "x");
-  } else {
-    hamburgerIcon.setAttribute("name", "menu-alt-right");
+window.addEventListener("click", (e) => {
+  const isClickInsideHamburger = hamburgerIcon.contains(e.target);
+  const isClickInsideNavMenu = navMenu.contains(e.target);
+
+  // Jika klik BUKAN di hamburger dan BUKAN di navMenu, tutup menu
+  if (!isClickInsideHamburger && !isClickInsideNavMenu) {
+    navMenu.classList.remove("active");
   }
 });
 
-// tutup sidebar jika tidak klik ikon hamburger dan navigation bar
-document.addEventListener("click", (e) => {
-  if (e.target.id !== hamburgerIcon.id && e.target.id !== navMenu.id) {
-    navMenu.classList.remove("nav-menu-active");
-    hamburgerIcon.setAttribute("name", "menu-alt-right");
-  }
-});
 
-// set foto gallery
-const galleryItem = document.querySelectorAll(".gallery-item");
-galleryItem.forEach((el, index) => {
-  el.style.backgroundImage = `url("./src/assets/gallery/image-${
-    index + 1
-  }.png")`;
-});
 
-// scroll to top jika klik logo
-logo.addEventListener("click", () => {
-  window.scrollTo(0, 0);
-});
+const attractionCards = document.querySelector(".attractions-section__cards")
+
+const destinasiWisata = [
+  {
+    title : "Pantai Carita",
+    img : "./src/assets/gallery/pantai-carita.png", 
+    alt : "Pantai Carita",
+    description : "Nikmati keindahan pantai pasir putih dengan latar belakang Gunung Krakatau yang menakjubkan."
+  },
+  {
+    title : "Pantai Bugel",
+    img : "./src/assets/gallery/pantai-bugel.png", 
+    alt : "Pantai Bugel",
+    description : "Keindahan pantai dengan rumput hijau dan pemandangan yang menakjubkan, cocok untuk berkemah."
+  },
+  {
+    title : "Taman Nasional Ujung Kulon",
+    img : "./src/assets/gallery/ujung-kulon.png", 
+    alt : "Taman Nasional Ujung Kulon",
+    description : "Temukan flora dan fauna langka, termasuk badak Jawa, di taman nasional pertama Indonesia ini."
+  },
+  {
+    title : "Curug Goong",
+    img : "./src/assets/gallery/curug-goong.png", 
+    alt : "curug goong",
+    description : "Wisata air terjun curug goong, nikmati kesejukan alam dan keindahan suara arus sungai."
+  },
+]
+
+
+
+destinasiWisata.forEach((data) => {
+  const {title,img,alt,description} = data
+
+  const attractionCard = document.createElement("div")
+  attractionCard.classList.add("attactions__card")
+  const attractionCardImg = document.createElement("img")
+  attractionCardImg.setAttribute("src", img)
+  attractionCardImg.setAttribute("alt", alt)
+  attractionCardImg.classList.add("attractions__card-image");
+
+  const attractionCardTitle = document.createElement("h3")
+  attractionCardTitle.textContent = title
+  const attractionCardDesc = document.createElement("p")
+  attractionCardDesc.textContent = description
+
+
+  attractionCard.append(attractionCardImg, attractionCardTitle, attractionCardDesc)
+
+  attractionCards.appendChild(attractionCard)
+})
+
+

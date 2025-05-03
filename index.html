@@ -17,583 +17,62 @@
       href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- aos library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
-  <body>
-    <header data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
-      <nav class="navbar">
-        <div>
-          <p class="logo" id="logo">WisataPandeglang</p>
-        </div>
-        <ul class="nav-menu" id="nav-menu">
-          <li>
-            <a href="#" id="nav-link" class="nav-link">Beranda</a>
-          </li>
-          <li>
-            <a href="#tentang" id="nav-link" class="nav-link">Tentang</a>
-          </li>
-          <li>
-            <a href="#objek-wisata" id="nav-link" class="nav-link"
-              >Objek Wisata</a
-            >
-          </li>
-
-          <li>
-            <a href="#paket-wisata" id="nav-link" class="nav-link"
-              >Paket Wisata</a
-            >
-          </li>
-          <li>
-            <a href="#gallery" id="nav-link" class="nav-link">Gallery</a>
-          </li>
-        </ul>
-        <div class="search-hamburger-wrapper">
-          <form action="" class="search">
-            <button type="button" class="search-button">
-              <box-icon
-                name="search-alt"
-                size="sm"
-                color="white"
-                id="search-icon"
-              ></box-icon>
-            </button>
-            <input
-              type="search"
-              class="search-input"
-              placeholder="Cari Sesuatu?"
-            />
-          </form>
-          <button class="hamburger-menu">
-            <box-icon
-              name="menu-alt-right"
-              size="sm"
-              color="white"
-              class="hamburger-icon"
-              id="hamburger-icon"
-            ></box-icon>
-          </button>
-        </div>
+  
+<body>
+  <header class="site-header">
+      <nav class="nav">
+          <p class="nav__logo" id="logo">WisataPandeglang</p>
+          <ul class="nav__menu">
+              <li><a href="#beranda" class="nav__link">Beranda</a></li>
+              <li><a href="#tentang" class="nav__link">Tentang</a></li>
+              <li><a href="#destinasi" class="nav__link">Destinasi</a></li>
+              <li><a href="#kuliner" class="nav__link">Kuliner</a></li>
+              <li><a href="#akomodasi" class="nav__link">Akomodasi</a></li>
+          </ul>
+          <div class="nav__controls">
+              <form class="search-form">
+                  <input type="text" placeholder="Cari..." class="search-form__input">
+                  <button type="submit" class="search-form__button">Cari</button>
+              </form>
+              <div class="hamburger" id="hamburger-menu">
+                  <span class="hamburger__line"></span>
+                  <span class="hamburger__line"></span>
+                  <span class="hamburger__line"></span>
+              </div>
+          </div>
       </nav>
-    </header>
-    <div class="hero">
-      <img
-        src="./src/assets/hero-banner.png"
-        data-aos="zoom-out"
-        data-aos-duration="1000"
-        data-aos-anchor-placement="center-bottom"
-        class="hero-image"
-        alt="hero"
-      />
-      <div class="main-title">
-        <h2 data-aos="zoom-in" data-aos-duration="1000">Info Wisata</h2>
-        <h1 data-aos="zoom-in" data-aos-duration="1500">Kota Pandeglang</h1>
-        <a href="#objek-wisata" data-aos="fade-up" data-aos-duration="1000"
-          >Cari Tempat Wisata</a
-        >
+  </header>
+
+  <section class="hero-section" id="beranda">
+      <div class="hero-section__content">
+          <h1 class="hero-section__title">Selamat Datang di Wisata Pandeglang</h1>
+          <p class="hero-section__subtitle">Jelajahi keindahan alam dan budaya Pandeglang yang memikat.</p>
       </div>
-    </div>
-    <main>
-      <div
-        class="tentang"
-        id="tentang"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-anchor-placement="top-center"
-        data-aos-once="true"
-      >
-      <p>Tentang</p>
-      <h2 class="h2-title">Kota Pandeglang</h2>
-      <div class="video-text-wrapper">
-        <div class="tentang-text">
-          <p>
-            Kota atau Kabupaten Pandeglang adalah sebuah kabupaten yang terletak
-            di Provinsi Banten, Indonesia. Kabupaten ini ber-ibu kota di
-            Kecamatan Pandeglang. Kabupaten ini berbatasan dengan Kabupaten
-            Serang di utara, Kabupaten Lebak di Timur, serta Samudra Hindia di
-            barat dan selatan. Wilayahnya juga mencakup Pulau Panaitan di
-            sebelah barat, dipisahkan dengan Selat Panaitan), serta sejumlah
-            pulau-pulau kecil di Samudra Hindia, termasuk Pulau Deli dan Pulau
-            Tinjil. Semenanjung Ujung Kulon merupakan ujung paling barat Pulau
-            Jawa, di mana terdapat suaka margasatwa tempat perlindungan hewan
-            badak bercula satu yang kini hampir punah. Suku aslinya adalah Suku
-            Sunda Banten.
+  </section>
+
+  <section class="about-section" id="tentang">
+      <div class="about-section__content">
+          <h2 class="about-section__title">Tentang Pandeglang</h2>
+          <p class="about-section__description">
+              Pandeglang, terletak di ujung barat Pulau Jawa, dikenal dengan pesona alamnya yang luar biasa. Dari pantai-pantai indah hingga pegunungan yang menakjubkan, Pandeglang adalah destinasi yang sempurna untuk wisata alam dan budaya.
           </p>
-        </div>
-          <div
-            class="tentang-video"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            <iframe
-              class="video-tentang-pandeglang"
-              src="https://youtube.com/embed/fx0g_eXR8GY?si=3Dfu89rw4Hs7x_iL?modestbranding=1&showinfo=0"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
       </div>
-      <div
-        class="objek-wisata"
-        id="objek-wisata"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-anchor-placement="top-center"
-        data-aos-once="true"
-      >
-        <p>Objek Wisata</p>
-        <h2 class="h2-title">Objek Wisata Populer</h2>
-        <p>
-          Wisata Populer di Pandeglang yaitu pantai, curug atau air terjun, dan
-          pegunungan.
-        </p>
-        <div class="objek-wisata-card">
-          <div
-            class="objek-wisata-card-item"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            <img
-              src="http://img.youtube.com/vi/8coByAYwdpE/mqdefault.jpg"
-              title="YouTube Video"
-              alt="YouTube Video"
-            />
-            <div class="info">
-              <div>
-                <h4>Kampung Domba</h4>
-                <p>Wisata kampung domba</p>
-              </div>
-              <a href="https://youtu.be/8coByAYwdpE" target="_blank"
-                >Tonton di Youtube<box-icon
-                  name="link-external"
-                  size="24px"
-                  color="white"
-                  title="Tonton di youtube"
-                ></box-icon
-              ></a>
-            </div>
-          </div>
-          <div
-            class="objek-wisata-card-item"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            <img
-              src="http://img.youtube.com/vi/SilqEuQcaok/mqdefault.jpg"
-              size="32px"
-              color="white"
-              title="Tonton di youtube"
-              alt="YouTube Video"
-            />
-            <div class="info">
-              <div>
-                <h4>Pantai Karangsari Carita</h4>
-                <p>Wisata pantai karangsari carita</p>
-              </div>
-              <a href="https://youtu.be/3FgmD7jH2PU" target="_blank"
-                >Tonton di Youtube<box-icon
-                  name="link-external"
-                  size="24px"
-                  color="white"
-                  title="Tonton di youtube"
-                ></box-icon
-              ></a>
-            </div>
-          </div>
-          <div
-            class="objek-wisata-card-item"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            <img
-              src="http://img.youtube.com/vi/Mq1p8-3W_Hg/mqdefault.jpg"
-              size="32px"
-              color="white"
-              title="Tonton di youtube"
-              alt="YouTube Video"
-            />
-            <div class="info">
-              <div>
-                <h4>Pantai Kodok Carita</h4>
-                <p>Wisata pantai Kodok carita</p>
-              </div>
-              <a href="https://youtu.be/3FgmD7jH2PU" target="_blank"
-                >Tonton di Youtube<box-icon
-                  name="link-external"
-                  size="24px"
-                  color="white"
-                  title="Tonton di youtube"
-                ></box-icon
-              ></a>
-            </div>
-          </div>
-          <div
-            class="objek-wisata-card-item"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            <img
-              src="http://img.youtube.com/vi/_ru_0f6vnYI/mqdefault.jpg"
-              size="32px"
-              color="white"
-              title="Tonton di youtube"
-              alt="YouTube Video"
-            />
-            <div class="info">
-              <div>
-                <h4>Pantai Batu Hideung</h4>
-                <p>Wisata pantai Batu Hideung Tanjung Lesung</p>
-              </div>
-              <a href="https://youtu.be/_ru_0f6vnYI" target="_blank"
-                >Tonton di Youtube<box-icon
-                  name="link-external"
-                  size="24px"
-                  color="white"
-                  title="Tonton di youtube"
-                ></box-icon
-              ></a>
-            </div>
-          </div>
-          <div
-            class="objek-wisata-card-item"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            <img
-              src="http://img.youtube.com/vi/sjFAPRLMTRA/mqdefault.jpg"
-              size="32px"
-              color="white"
-              title="Tonton di youtube"
-              alt="YouTube Video"
-            />
-            <div class="info">
-              <div>
-                <h4>Curug Goong</h4>
-                <p>Wisata Curug Goong Mandalawangi</p>
-              </div>
-              <a href="https://youtu.be/sjFAPRLMTRA" target="_blank"
-                >Tonton di Youtube<box-icon
-                  name="link-external"
-                  size="24px"
-                  color="white"
-                  title="Tonton di youtube"
-                ></box-icon
-              ></a>
-            </div>
-          </div>
-          <div
-            class="objek-wisata-card-item"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            <img
-              src="http://img.youtube.com/vi/0lQAHTwe6Oo/mqdefault.jpg"
-              size="32px"
-              color="white"
-              title="Tonton di youtube"
-              alt="YouTube Video"
-            />
-            <div class="info">
-              <div>
-                <h4>Curug Leuwi Bumi</h4>
-                <p>Wisata Curug Leuwi Bumi Mandalawangi</p>
-              </div>
-              <a href="https://youtu.be/0lQAHTwe6Oo" target="_blank"
-                >Tonton di Youtube<box-icon
-                  name="link-external"
-                  size="24px"
-                  color="white"
-                  title="Tonton di youtube"
-                ></box-icon
-              ></a>
-            </div>
-          </div>
-        </div>
+      <div class="about-section__video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/NkBkFevJQ2I" title="Video Wisata Pandeglang" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div
-        class="paket-wisata"
-        id="paket-wisata"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-anchor-placement="top-center"
-        data-aos-once="true"
-      >
-        <p>Paket Wisata</p>
-        <h2 class="h2-title">Paket Wisata Pandeglang</h2>
-        <p>Temukan Paket Wisata Terbaik</p>
-        <div class="paket-wisata-card">
-          <div
-            class="paket-wisata-card-item"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            <div
-              class="image"
-              style="background-image: url('./src/assets/gallery/image-12.png')"
-            >
-              <p><span>Rp. 150.000</span> Rp. 100.000</p>
-            </div>
-            <div class="info">
-              <h3>Camping di Curug Goong</h3>
-              <p>Paket Camping di Curug Goong 2 hari 1 malam</p>
-              <button>Pesan Sekarang</button>
-            </div>
-          </div>
+  </section>
 
-          <div
-            class="paket-wisata-card-item"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            <div
-              class="image"
-              style="background-image: url('./src/assets/gallery/image-8.png')"
-            >
-              <p><span>Rp. 700.000</span> Rp. 500.000</p>
-            </div>
-            <div class="info">
-              <h3>Paket Wisata di Curug Leuwi Bumi</h3>
-              <p>
-                Paket Wisata Camping, Arum Jeram, dll. di Curug Leuwi Bumi 2
-                hari 1 malam
-              </p>
-              <button>Pesan Sekarang</button>
-            </div>
-          </div>
-
-          <div
-            class="paket-wisata-card-item"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            <div
-              class="image"
-              style="background-image: url('./src/assets/gallery/image-9.png')"
-            >
-              <p><span>Rp. 1.000.000</span> Rp. 750.000</p>
-            </div>
-            <div class="info">
-              <h3>Saung Biru</h3>
-              <p>Paket Menginap di Saung Biru</p>
-              <button>Pesan Sekarang</button>
-            </div>
-          </div>
-
-          <div
-            class="paket-wisata-card-item"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            <div
-              class="image"
-              style="background-image: url('./src/assets/gallery/image-11.png')"
-            >
-              <p><span>Rp. 650.000</span> Rp. 500.000</p>
-            </div>
-            <div class="info">
-              <h3>Paket Wisata Cikoromoy</h3>
-              <p>
-                Paket tiket masuk, tempat khusus, paket lengkap nasi liwet, dll.
-              </p>
-              <button>Pesan Sekarang</button>
-            </div>
-          </div>
-
-          <div
-            class="paket-wisata-card-item"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            <div
-              class="image"
-              style="background-image: url('./src/assets/gallery/image-1.png')"
-            >
-              <p><span>Rp. 300.000</span> Rp. 250.000</p>
-            </div>
-            <div class="info">
-              <h3>Paket Wisata di Kampung Domba</h3>
-              <p>Paket makanan andalan, tempat view terbaik, dll.</p>
-              <button>Pesan Sekarang</button>
-            </div>
-          </div>
-
-          <div
-            class="paket-wisata-card-item"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            <div
-              class="image"
-              style="background-image: url('./src/assets/gallery/image-6.png')"
-            >
-              <p><span>Rp. 150.000</span> Rp. 100.000</p>
-            </div>
-            <div class="info">
-              <h3>Paket Wisata Curug Putri</h3>
-              <p>Paket wisata curug putri, tour guide, tiket masuk</p>
-              <button>Pesan Sekarang</button>
-            </div>
-          </div>
-        </div>
+  <section class="attractions-section" id="destinasi">
+      <h2 class="attractions-section__title">Objek Wisata Unggulan</h2>
+      <div class="attractions-section__cards">
+          
+    
       </div>
-
-      <div
-        class="gallery"
-        id="gallery"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-anchor-placement="top-center"
-        data-aos-once="true"
-      >
-        <p>Gallery</p>
-        <h2 class="h2-title">Menelusuri keindahan Alam</h2>
-        <p>Pemandangan Menakjubkan dan Aktivitas Seru</p>
-        <div class="gallery-container">
-          <div
-            class="gallery-item"
-            data-aos="zoom-in-up"
-            data-aos-anchor-placement="bottom-bottom"
-            data-aos-once="true"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <h4>Kampung Domba</h4>
-          </div>
-          <div
-            class="gallery-item"
-            data-aos="zoom-in-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-once="true"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <h4>Lembur Kula</h4>
-          </div>
-          <div
-            class="gallery-item"
-            data-aos="zoom-in-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-once="true"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <h4>Pantai Bugel</h4>
-          </div>
-          <div
-            class="gallery-item"
-            data-aos="zoom-in-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-once="true"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <h4>Citaman</h4>
-          </div>
-          <div
-            class="gallery-item"
-            data-aos="zoom-in-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-once="true"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <h4>Pantai Carita</h4>
-          </div>
-          <div
-            class="gallery-item"
-            data-aos="zoom-in-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-once="true"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <h4>Curug Putri</h4>
-          </div>
-          <div
-            class="gallery-item"
-            data-aos="zoom-in-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-once="true"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <h4>Cihunjuran</h4>
-          </div>
-          <div
-            class="gallery-item"
-            data-aos="zoom-in-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-once="true"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <h4>Curug Leuwi Bumi</h4>
-          </div>
-          <div
-            class="gallery-item"
-            data-aos="zoom-in-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-once="true"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <h4>Villa Biru</h4>
-          </div>
-          <div
-            class="gallery-item"
-            data-aos="zoom-in-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-once="true"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <h4>Tanjung Lesung</h4>
-          </div>
-          <div
-            class="gallery-item"
-            data-aos="zoom-in-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-once="true"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <h4>Cikoromoy</h4>
-          </div>
-          <div
-            class="gallery-item"
-            data-aos="zoom-in-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-once="true"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <h4>Curug Goong</h4>
-          </div>
-        </div>
-      </div>
-    </main>
+  </section>
 
     <footer
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-anchor-placement="bottom-bottom"
-      data-aos-once="true"
     >
     <div class="footer-wrapper">
 
@@ -658,8 +137,7 @@
               </div>
             </div>
               <div class="footer-bottom">
-               
-                <div class="footnote">
+                   <div class="footnote">
                   <p>wisatapandeglang@2024</p>
                 </div>
     </div>
@@ -667,11 +145,6 @@
 
     <!-- library and icon -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-
     <!-- script -->
     <script src="./src/script/index.js"></script>
   </body>
