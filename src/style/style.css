@@ -125,6 +125,7 @@ ul {
 
 .hero-section__subtitle {
   font-size: 1.2rem;
+  text-shadow: 10px 10px 10px black;
 }
 
 /* About Section */
@@ -174,10 +175,9 @@ ul {
 }
 
 .attractions-section__cards {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center;
 }
 
 .attractions__card {
@@ -195,6 +195,7 @@ ul {
 
 .attractions__card-image {
   width: 100%;
+  max-width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
@@ -309,6 +310,12 @@ footer {
   }
 }
 
+@media screen and (min-width : 736px){
+  .attractions-section__cards{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .about-section {
     flex-direction: row;
@@ -317,13 +324,6 @@ footer {
   .search-form {
     display: flex;
   }
-
-  .attractions-section__cards{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-
 .footer-top-logo-wrapper {
   display: flex;
   flex-wrap: wrap;
